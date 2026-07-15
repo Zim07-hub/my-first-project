@@ -1,0 +1,27 @@
+代码数据分为Controller->Service->Dao三层
+Controller：接受请求、响应数据
+Service：逻辑的处理（代码的主体
+Dao（mapper）：数据的访问（对数据的增、删、改、查。
+
+
+IOC ：控制反转
+  
+  将实现类注入IOC的控制容器，达成低耦合高内聚；
+  对象的创建控制权由程序自身转移至外部容器；
+
+
+DI：依赖注入
+
+  @Autowire进行的依赖注入，且分为三种注入方法：1.属性注入  2.构造方法注入  3.setter方法注入
+  容器为应用程序提供运行时，所依赖的资源，成为依赖注入
+  例如：  @Autowire
+		private Userserving userserving;
+
+
+
+79：反向代理：网络架构技术，为后端服务器做代理
+	（Nginx）例：   location ^~/api/ {					--->代理转发指令
+					rewrite ^/api/(.*)$ /$1 break;    		--->路径的重写指令
+					proxy-pass http://localhost:8080;  	--->定义路径匹配方式
+
+80.简单参数的接收方式---> @RequestParam注解（在请求参数名与形参变量名相等时可省略
